@@ -1,0 +1,12 @@
+# Paper Section 4.2 (Tables 5-7; Figs. 3-4): effectiveness of GCLS, ABS and SPDM on CEC2017.
+name: cec2017_ablation
+suite: cec2017
+dim: 10                # paper: 10, 30, 50 and 100 (override with --dim)
+algorithms: [rime, rime-g, rime-a, rime-s, rime-ga, rime-gs, rime-as, mrime-cd]   # Table 5
+runs: 51               # Table 2
+evals_per_dim: 3000    # Table 2
+pop_coefficient: 30    # NP = ceil(30 * D^(2/3)), from matlab/Run_CEC2017_Strategy_MRIME.m (not in the paper)
+seed: 2025
+workers: 4
+backend: native
+paper_reference: "Tables 6-7 (CEC 2017 columns); Figs. 3-4"

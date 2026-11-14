@@ -1,0 +1,14 @@
+# Reduced reproduction, part A: CEC2022, D = 10, all variants of Table 5, paper profile,
+# strict evaluation accounting. Same runs / budget / population rule as the paper's CEC2022
+# experiments; what is reduced is the scope (RIME family only, smallest dimension).
+name: cec2022_d10
+suite: cec2022
+dim: 10
+algorithms: [rime, rime-g, rime-a, rime-s, rime-ga, rime-gs, rime-as, mrime-cd]
+runs: 51
+evals_per_dim: 3000
+pop_coefficient: 30
+seed: 2025
+workers: 4
+backend: native
+paper_reference: "Table 10 (MRIME-CD and RIME columns); Tables 6-7 (CEC 2022, D = 10)"

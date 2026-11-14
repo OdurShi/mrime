@@ -1,0 +1,17 @@
+# Reduced reproduction, part D (diagnostic): CEC2022, D = 10 with the operator-level behaviour
+# of the MATLAB files ("matlab" profile), the MATLAB search range for F11 ([-600, 600]) and,
+# as a third arm, the evaluation counter of matlab/MRIME_RL_Cov.m as shipped
+# ("matlab-as-shipped": the third arm performs many more than FEsmax objective evaluations, so
+# it is NOT an equal-budget comparison). 10 runs instead of the paper's 51.
+name: cec2022_d10_matlab
+suite: cec2022
+dim: 10
+algorithms: [rime@matlab, mrime-cd@matlab, mrime-cd@matlab-as-shipped]
+runs: 10
+evals_per_dim: 3000
+pop_coefficient: 30
+matlab_bounds: true
+seed: 2025
+workers: 4
+backend: native
+paper_reference: "Table 10 (MRIME-CD and RIME columns), diagnostic"

@@ -1,9 +1,34 @@
-
+# Python
 __pycache__/
 *.py[cod]
-.DS_Store
-.venv/
-.env
+*.egg-info/
+.eggs/
 build/
 dist/
-*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Native CEC backend build directory (compiled on demand from matlab/*.cpp)
+.mrime_native/
+
+# Run outputs: only the reduced-scale reproduction under results/reduced/ is tracked
+results/*
+!results/reduced/
+
+# MATLAB artefacts
+*.asv
+*.mex*
+*.mat
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/

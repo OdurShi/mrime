@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mrime"
+version = "0.1.0"
+description = "Reference implementation of MRIME-CD: a modified RIME algorithm with covariance learning and diversity enhancement"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Shangqing Shi" },
+  { name = "Luoxiao Zhang" },
+  { name = "Yuchen Yin" },
+  { name = "Xiong Yang" },
+  { name = "Hoileong Lee" },
+]
+keywords = ["metaheuristics", "numerical optimization", "RIME", "covariance learning", "CEC2017", "CEC2022"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+# only for scripts/extract_paper_figures.py
+figures = ["pymupdf>=1.24.3"]
+# opfunu 1.0.4 imports pkg_resources, which setuptools removed in version 81.
+cec = ["opfunu>=1.0.4", "setuptools<81"]
+dev = ["pytest>=7.4", "ruff>=0.4", "matplotlib>=3.7"]
+
+[project.scripts]
+mrime = "mrime.cli:main"
+
+[project.urls]
+Paper = "https://doi.org/10.1007/s10586-025-05348-3"
+Repository = "https://github.com/OdurShi/mrime"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mrime"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "configs", "scripts", "examples", "README.md", "LICENSE", "CITATION.cff"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = [
+  "ignore:pkg_resources is deprecated:UserWarning",
+  "ignore:pkg_resources is deprecated:DeprecationWarning",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["matlab", "results", "docs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "NPY", "RUF"]
+ignore = ["RUF002", "RUF003"]

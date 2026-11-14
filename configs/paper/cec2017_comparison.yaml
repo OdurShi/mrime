@@ -1,0 +1,14 @@
+# Paper Section 4.3 (Tables 8, 9, 17-20; Figs. 5-8, 13-16): MRIME-CD against RIME on CEC2017.
+# The eight other competitors of the paper (EO, SAO, ACGRIME, IRIME, TERIME, EOSMA, RDGMVO,
+# MTVSCA) exist only as MATLAB code under matlab/ and are not part of the Python package.
+name: cec2017_comparison
+suite: cec2017
+dim: 10                # paper: 10, 30, 50 and 100 (override with --dim)
+algorithms: [mrime-cd, rime]
+runs: 51               # Table 2
+evals_per_dim: 3000    # Table 2: FEsmax = 3000 x Dim
+pop_coefficient: 15    # NP = ceil(15 * D^(2/3)), from matlab/Run_CEC2017_total_MRIME.m (not in the paper)
+seed: 2025
+workers: 4
+backend: native
+paper_reference: "Tables 8, 9, 17-20; Figs. 5-8, 13-16"

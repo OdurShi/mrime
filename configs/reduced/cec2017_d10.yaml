@@ -1,0 +1,14 @@
+# Reduced reproduction, part C: CEC2017, D = 10, RIME against MRIME-CD, paper profile, strict
+# evaluation accounting, 15 runs instead of the paper's 51 (the time budget of the reduced run
+# did not allow more; the ablation variants were not run on CEC2017).
+name: cec2017_d10
+suite: cec2017
+dim: 10
+algorithms: [rime, mrime-cd]
+runs: 15
+evals_per_dim: 3000
+pop_coefficient: 15    # as in matlab/Run_CEC2017_total_MRIME.m
+seed: 2025
+workers: 4
+backend: native
+paper_reference: "Table 17 (MRIME-CD and RIME columns); Table 8 (D = 10, RIME row)"

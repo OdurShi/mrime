@@ -1,0 +1,13 @@
+# Paper Section 4.4 (Tables 10-14; Figs. 9-12, 17-18): MRIME-CD against RIME on CEC2022.
+# The eight other competitors of the paper exist only as MATLAB code under matlab/.
+name: cec2022_comparison
+suite: cec2022
+dim: 10                # paper: 10 and 20 (override with --dim)
+algorithms: [mrime-cd, rime]
+runs: 51               # Table 2
+evals_per_dim: 3000    # Table 2: FEsmax = 3000 x Dim
+pop_coefficient: 30    # NP = ceil(30 * D^(2/3)), from matlab/Run_CEC2022_total_MRIME.m (not in the paper)
+seed: 2025
+workers: 4
+backend: native
+paper_reference: "Tables 10-14; Figs. 9-12, 17-18"

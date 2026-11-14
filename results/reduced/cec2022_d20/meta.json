@@ -1,0 +1,56 @@
+{
+  "config": {
+    "name": "cec2022_d20",
+    "suite": "cec2022",
+    "dim": 20,
+    "algorithms": [
+      "rime",
+      "rime-g",
+      "rime-a",
+      "rime-s",
+      "rime-ga",
+      "rime-gs",
+      "rime-as",
+      "mrime-cd"
+    ],
+    "runs": 51,
+    "functions": null,
+    "max_evals": null,
+    "evals_per_dim": 3000,
+    "pop_size": null,
+    "pop_coefficient": 30,
+    "seed": 2025,
+    "workers": 4,
+    "backend": "native",
+    "matlab_bounds": false,
+    "curve_points": 51,
+    "paper_reference": "Table 11 (MRIME-CD and RIME columns); Tables 6-7 (CEC 2022, D = 20)",
+    "resolved_max_evals": 60000,
+    "resolved_pop_size": 222,
+    "resolved_functions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "n_runs_total": 4896,
+  "wall_time_s": 191.55,
+  "cpu_time_s": 749.9,
+  "versions": {
+    "mrime": "0.1.0",
+    "python": "3.11.18",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "platform": "Darwin arm64",
+  "curve_grid": "best-so-far at evenly spaced evaluation-counter values in [0, max_evals]"
+}

@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the article below."
+title: "MRIME-CD: a modified RIME algorithm with covariance learning and diversity enhancement"
+type: software
+authors:
+  - given-names: Shangqing
+    family-names: Shi
+  - given-names: Luoxiao
+    family-names: Zhang
+  - given-names: Yuchen
+    family-names: Yin
+  - given-names: Xiong
+    family-names: Yang
+  - given-names: Hoileong
+    family-names: Lee
+repository-code: "https://github.com/OdurShi/mrime"
+license: MIT
+preferred-citation:
+  type: article
+  title: "A modified RIME algorithm with covariance learning and diversity enhancement for numerical optimization"
+  authors:
+    - given-names: Shangqing
+      family-names: Shi
+    - given-names: Luoxiao
+      family-names: Zhang
+    - given-names: Yuchen
+      family-names: Yin
+    - given-names: Xiong
+      family-names: Yang
+    - given-names: Hoileong
+      family-names: Lee
+  journal: "Cluster Computing"
+  volume: 28
+  number: "658"
+  year: 2025
+  doi: "10.1007/s10586-025-05348-3"
+  publisher:
+    name: "Springer"

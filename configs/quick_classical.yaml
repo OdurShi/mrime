@@ -1,0 +1,10 @@
+# Quick start: the eight built-in functions, no data files or compiler needed (seconds).
+name: quick_classical
+suite: classical
+dim: 10
+algorithms: [rime, mrime-cd]
+runs: 10
+max_evals: 20000
+pop_size: 50
+seed: 0
+workers: 2
