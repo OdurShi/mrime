@@ -476,7 +476,7 @@ Observations (10 runs, indicative):
 
 ### 9.5 Checks
 
-* `python -m pytest`: 169 tests pass; `ruff check .` reports no findings.
+* `python -m pytest`: 170 tests pass; `ruff check .` reports no findings.
 * `python scripts/verify_cec_backends.py` (`results/reduced/cec_backend_check.md`): native
   backend `|f(x*) - f*| <= 1.1e-10` for all CEC2017 functions at D = 10/30/50/100 and all
   CEC2022 functions at D = 10/20; `opfunu` agrees with the reference code on 4 of 82 cases
